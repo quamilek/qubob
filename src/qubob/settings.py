@@ -121,7 +121,6 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'bob',
     'jquery',
-    'fugue_icons',
     'example'
 
 )
