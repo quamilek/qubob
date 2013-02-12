@@ -17,7 +17,7 @@ with open(os.path.join(current_dir, 'README.markdown')) as readme_file:
 setup (
     name = 'qubob',
     version='0.1alfa',
-    name='Kamil Warguła',
+    author='Kamil Warguła @Quamilek',
     author_email = 'kwargula@gmail.com',
     description = "Example usage django-bob library",
     long_description = long_description,
