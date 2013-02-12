@@ -34,4 +34,19 @@ setup (
         'django-bob==1.5.3',
         'django-jquery==1.9.0',
     ],
+    entry_points={
+        'console_scripts': [
+            'qubob = qubob.qubob:main',
+        ],
+    },
+    classifiers = [
+        'Development Status :: 4 - Beta',
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python',
+        'Topic :: Scientific/Engineering :: Human Machine Interfaces',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Software Development :: User Interfaces',
+    ]
 )
