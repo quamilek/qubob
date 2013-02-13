@@ -27,18 +27,13 @@ setup (
     license = 'Apache Software License v2.0',
     packages = find_packages('src'),
     include_package_data = True,
-    package_dir = {'':'src'},
+    package_dir = {'example':'src'},
     zip_safe = False,
     install_requires = [
         'django==1.4.3',
         'django-bob==1.5.3',
         'django-jquery==1.9.0',
     ],
-    entry_points={
-        'console_scripts': [
-            'qubob = qubob.qubob:main',
-        ],
-    },
     classifiers = [
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
