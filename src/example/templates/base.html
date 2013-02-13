@@ -1,35 +1,19 @@
 {% load bob %}
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>test</title>
+    <title>Qubob - example usage django-bob library</title>
     <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-
+{% main_menu mainmenu_items section title="Qubob" search=index %}
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
-
-            <table class="table table-bordered table-striped table-properties">
-                <tr>
-                    {% table_header columns url_query sort fugue_icons%}
-                </tr>
-                {% for f in bob_page %}
-                    <tr>
-                        <td>x</td>
-                        <td>{{ f.title}}</td>
-                        <td>{{ f.pub_date }}</td>
-                        <td>{{ f.price }}</td>
-                    </tr>
-                {% endfor %}
-            </table>
-            {% pagination bob_page url_query=url_query show_all=1 show_csv=1 fugue_icons=0 %}
+            {% block contentarea %}{% endblock %}
         </div>
     </div>
 </div>
-
 <script src="{{ STATIC_URL }}/js/jquery.js" />
 <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
 <script src="{{ STATIC_URL }}bootstrap/js/bob.js"></script>

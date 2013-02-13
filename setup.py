@@ -21,14 +21,14 @@ setup (
     author_email = 'kwargula@gmail.com',
     description = "Example usage django-bob library",
     long_description = long_description,
-    url = 'http://beast.allegrogroup.com/',
+    url = 'https://github.com/quamilek/qubob',
     keywords = '',
     platforms = ['any'],
     license = 'Apache Software License v2.0',
     packages = find_packages('src'),
     include_package_data = True,
     package_dir = {'':'src'},
-    zip_safe = False, # because templates are loaded from file path
+    zip_safe = False,
     install_requires = [
         'django==1.4.3',
         'django-bob==1.5.3',
@@ -46,7 +46,6 @@ setup (
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Scientific/Engineering :: Human Machine Interfaces',
-        'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Software Development :: User Interfaces',
     ]
 )

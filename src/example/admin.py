@@ -9,6 +9,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 from example.models import Book
 
+
 class BookAdmin(admin.ModelAdmin):
     save_on_top = True
     list_display = ('title', 'pub_date', 'price')

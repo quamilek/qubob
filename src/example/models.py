@@ -12,7 +12,7 @@ from django.db import models
 class Book(models.Model):
     title = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
-    price = models.DecimalField( max_digits=5, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __unicode__(self):
         return self.title

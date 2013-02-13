@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load bob %}
+{% block contentarea %}
+    <h3>DataTableMixin - Example</h3>
+    <table class="table table-bordered table-striped table-properties">
+        <tr>
+            {% table_header columns url_query sort fugue_icons %}
+        </tr>
+        {% for f in bob_page %}
+            <tr>
+                <td>x</td>
+                <td>{{ f.title}}</td>
+                <td>{{ f.pub_date }}</td>
+                <td>{{ f.price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% pagination bob_page url_query=url_query show_all=0 show_csv=1 fugue_icons=0 %}
+{% endblock %}
+
+
