@@ -108,3 +108,8 @@ class DataTableView(BaseView, DataTableMixin):
         if self.export_requested():
             return self.response
         return super(DataTableView, self).get(*args, **kwargs)
+
+class HomeView(BaseView):
+    template_name = "home.html"
+    def get_context_data(self, *args, **kwargs):
+        return  super(HomeView, self).get_context_data(*args, **kwargs)

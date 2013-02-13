@@ -15,7 +15,5 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^$', HomeView.as_view(), name='index'),
-    url(r'^examples/', include('example.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^data_table/', DataTableView.as_view(), name='data_table'),
 )
