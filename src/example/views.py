@@ -10,14 +10,15 @@ from bob.menu import MenuItem
 from bob.data_table import DataTableMixin, DataTableColumn
 from django.views.generic import TemplateView
 from example.models import Book
-
+from settings import DOC_URL
 
 class BaseView(TemplateView):
     template_name = "base.html"
 
     def get_context_data(self, *args, **kwargs):
         mainmenu_items = [
-            MenuItem('DataTable', view_name='data_table', icon='list-alt')
+            MenuItem('doc', href=DOC_URL, icon='question-sign'),
+            MenuItem('DataTable', view_name='data_table', icon='list-alt'),
         ]
         return {
             'section': 'home',

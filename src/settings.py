@@ -153,3 +153,4 @@ LOGGING = {
         },
     }
 }
+DOC_URL = 'http://quamilek.github.com/qubob/'
