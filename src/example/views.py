@@ -51,21 +51,21 @@ class DataTableView(BaseView, DataTableMixin):
             field='title',
             sort_expression='title',
             bob_tag=True,
-            export=True
+            export=True,
         ),
         _(
             'Publication Date',
             field='pub_date',
             sort_expression='pub_date',
             bob_tag=True,
-            export=True
+            export=True,
         ),
         _(
             'Price',
             field='price',
             sort_expression='price',
             bob_tag=True,
-            export=True
+            export=True,
         ),
     ]
 

@@ -8,7 +8,9 @@
         </tr>
         {% for f in bob_page %}
             <tr>
-                <td>x</td>
+                <td class="column-checkbox">
+                    <input type="checkbox" name="select" value="{{ f.id }}">
+                </td>
                 <td>{{ f.title}}</td>
                 <td>{{ f.pub_date }}</td>
                 <td>{{ f.price }}</td>
