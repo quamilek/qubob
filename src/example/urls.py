@@ -9,7 +9,7 @@ from __future__ import unicode_literals
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 
-from example.views import DataTableView, HomeView
+from example.data_table_view import DataTableView
 
 admin.autodiscover()
 
