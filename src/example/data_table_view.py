@@ -6,19 +6,9 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from bob.menu import MenuItem
 from bob.data_table import DataTableMixin, DataTableColumn
-from django.views.generic import TemplateView
 from example.models import Book
 from example.views import BaseView
-
-
-class DataTableExample(DataTableColumn):
-    def __init__(self, header_name, sort_expression=None, export=None,
-                 **kwargs):
-        super(DataTableExample, self).__init__(header_name, **kwargs)
-        self.sort_expression = sort_expression
-        self.export = export
 
 
 class DataTableView(BaseView, DataTableMixin):
@@ -27,7 +17,7 @@ class DataTableView(BaseView, DataTableMixin):
     rows_per_page = 5
     export_variable_name = 'export'
 
-    _ = DataTableExample
+    _ = DataTableColumn
     columns = [
         _(
             'Dropdown',
