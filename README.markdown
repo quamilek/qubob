@@ -8,7 +8,12 @@ https://bitbucket.org/thesheep/bob/
 How to run?
 ========
 
-
+Virtualenv (optional)
+```
+python -m virtualenv --no-site-packages ~/qubob
+cd qubob/
+```
+Required:
 ```
 git clone https://github.com/quamilek/qubob.git
 source bin/activate
