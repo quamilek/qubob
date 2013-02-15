@@ -28,9 +28,7 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1></h1>
-
-<h1>Qubob</h1>
+          <h1>Qubob</h1>
 
 <p>Qubob is example usage of <code>django-bob</code> library for Django
 <a href="https://bitbucket.org/thesheep/bob/">https://bitbucket.org/thesheep/bob/</a></p>
@@ -100,6 +98,29 @@ you must include bootstrap/js/bob.js file in your template</li>
         return ret
 </code></pre>
 
+<h3>Override <code>get</code> method</h3>
+
+<p>Just that, copy this cod, and replace <code>ExampleClass</code> to name your view class:</p>
+
+<pre><code>def get(self, *args, **kwargs):
+        self.get_query()
+        if self.export_requested():
+            return self.response
+        return super(ExampleClass, self).get(*args, **kwargs)
+</code></pre>
+
+<h3>data_table_query</h3>
+
+<p>You must assign to <code>self.data_table_query</code> your queryset, preferably at the beginning of <code>get</code> method  example:</p>
+
+<pre><code>def get(self, *args, **kwargs):
+    books = Book.objects.all()
+    self.data_table_query(books)
+    if self.export_requested():
+        return self.response
+    return super(ExampleClass, self).get(*args, **kwargs)
+</code></pre>
+
 <h3>Export CSV file</h3>
 
 <p>If you want to export data to CSV file you must ovverride <code>get_csv_data</code> method. This method mus be return  nestead list contains <code>string</code> data. Example:</p>
@@ -109,6 +130,8 @@ you must include bootstrap/js/bob.js file in your template</li>
     ['Python for Data Analysis', 'Feb. 12, 2013, 11:36 a.m.', '22.31',],
 ]
 </code></pre>
+
+<p>Method <code>get_csv_header</code> from DataTableMixin return a dict with columns names defined in <code>self.columns</code>. Can be used as a first line of CSV file.</p>
         </section>
 
         <aside id="sidebar">
