@@ -132,6 +132,34 @@ you must include bootstrap/js/bob.js file in your template</li>
 </code></pre>
 
 <p>Method <code>get_csv_header</code> from DataTableMixin return a dict with columns names defined in <code>self.columns</code>. Can be used as a first line of CSV file.</p>
+
+<h3>Template</h3>
+
+<p>In template must add a two tag from BOB.
+<code>{% table_header columns url_query sort fugue_icons %}</code>
+and
+<code>{% pagination bob_page url_query=url_query show_all=0 show_csv=1 fugue_icons=0 %}</code></p>
+
+<p>First display a heder of table, the second is responsible for pagination. You should show the data from the query.
+Example tamplate:</p>
+
+<pre><code>&lt;table class="table table-bordered table-striped table-properties"&gt;
+    &lt;tr&gt;
+        {% table_header columns url_query sort fugue_icons %}
+    &lt;/tr&gt;
+    {% for f in bob_page %}
+        &lt;tr&gt;
+            &lt;td class="column-checkbox"&gt;
+                &lt;input type="checkbox" name="select" value="{{ f.id }}"&gt;
+            &lt;/td&gt;
+            &lt;td&gt;{{ f.title}}&lt;/td&gt;
+            &lt;td&gt;{{ f.pub_date }}&lt;/td&gt;
+            &lt;td&gt;{{ f.price }}&lt;/td&gt;
+        &lt;/tr&gt;
+    {% endfor %}
+&lt;/table&gt;
+{% pagination bob_page url_query=url_query show_all=0 show_csv=1 fugue_icons=0 %}
+</code></pre>
         </section>
 
         <aside id="sidebar">
