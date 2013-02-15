@@ -135,10 +135,13 @@ you must include bootstrap/js/bob.js file in your template</li>
 
 <h3>Template</h3>
 
-<p>In template must add a two tag from BOB.
-<code>{% table_header columns url_query sort fugue_icons %}</code>
-and
-<code>{% pagination bob_page url_query=url_query show_all=0 show_csv=1 fugue_icons=0 %}</code></p>
+<p>In template must add a two tag from BOB.</p>
+
+<p><code>{% table_header columns url_query sort fugue_icons %}</code></p>
+
+<p>and</p>
+
+<p><code>{% pagination bob_page url_query=url_query show_all=0 show_csv=1 fugue_icons=0 %}</code></p>
 
 <p>First display a heder of table, the second is responsible for pagination. You should show the data from the query.
 Example tamplate:</p>
