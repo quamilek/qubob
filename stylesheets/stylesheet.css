@@ -340,6 +340,10 @@ dl dd {
   font-weight: 100;
 }
 
+strong{
+  font-weight: bold;
+}
+
 footer {
   background: transparent url('../images/hr.png') 0 0 no-repeat;
   margin-top: 40px;
