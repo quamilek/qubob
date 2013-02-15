@@ -24,3 +24,6 @@ cd src
 ```
 And open this link in browser:
 http://127.0.0.1:8000
+
+#### Documentation 
+http://quamilek.github.com/qubob/
