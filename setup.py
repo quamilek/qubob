@@ -31,7 +31,7 @@ setup (
     zip_safe = False,
     install_requires = [
         'django==1.4.3',
-        'django-bob==1.5.3',
+        'django-bob==1.5.4',
         'django-jquery==1.9.0',
     ],
     classifiers = [
